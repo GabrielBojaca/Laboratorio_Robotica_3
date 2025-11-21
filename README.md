@@ -1,5 +1,5 @@
-<p align="center"> 
-  <img src="https://capsule-render.vercel.app/api?type=waving&height=160&fontSize=28&color=0:001B2E,50:004E89,100:1A659E&text=Laboratorio%203%20-%20Robótica%202025-II&fontColor=E0FBFC&fontAlign=50&fontAlignY=30&desc=Análisis%20y%20Operación%20del%20Manipulador%20EPSON%20T3-401S&descAlign=50&descAlignY=70" />
+<p align="center">
+<img src="https://capsule-render.vercel.app/api?type=waving&height=160&fontSize=28&color=0:001B2E,50:004E89,100:1A659E&text=Laboratorio%203%20-%20Robótica%202025-II&fontColor=E0FBFC&fontAlign=50&fontAlignY=30&desc=Análisis%20y%20Operación%20del%20Manipulador%20EPSON%20T3-401S&descAlign=50&descAlignY=70" />
 </p>
 
 <h1 align="center">🤖 LABORATORIO 3 – EPSON T3-401S • EPSON RC+ 7.0</h1>
@@ -48,7 +48,7 @@ Este repositorio contiene el desarrollo completo del **Laboratorio Nº3** de *Ro
 # 1. Cuadro comparativo de manipuladores
 
 > [!WARNING]
-> FALTA agregar captura del cuadro comparativo oficial del PDF del laboratorio o foto de la diapositiva usada en clase.
+> FALTA agregar captura un cuadro comparativo más completo, como el de el lab pasado, pero estos datos parecen ser los básicos que pide el laboratorio.
 
 | Característica | EPSON T3-401S | Motoman MH6 | ABB IRB140 |
 |---|---|---|---|
@@ -65,24 +65,51 @@ Este repositorio contiene el desarrollo completo del **Laboratorio Nº3** de *Ro
 
 # 2. Configuración HOME del EPSON T3-401S
 
+El robot **EPSON T3-401S** posee encoders absolutos, por lo que se cuenta con la posiblidad de conocer la posición angular de cada articulación de forma absoluta. La siguiente tabla indica
+cuantos pulsos por revolucion corresponden a cada articulación. 
+
+### Pulsos por articulación – EPSON T3-401S
+
+| Articulación | Resolución | Tipo de movimiento | Pulsos por unidad |
+|--------------|------------|--------------------|-------------------|
+| **J1** | 0.000439 °/pulso | Rotacional | **≈ 820 210 pulsos/rev** |
+| **J2** | 0.000439 °/pulso | Rotacional | **≈ 820 210 pulsos/rev** |
+| **J3** | 0.000799 mm/pulso | Lineal | **≈ 1252 pulsos/mm** |
+| **J4** | 0.005017 °/pulso | Rotacional | **≈ 71 755 pulsos/rev** |
+
+El software de **Epson** requiere definir la posición de **HOME** en valores absolutos, utilizando **pulsos** como unidad para cada articulación.
+
+Para configurarlo:
+
+1. Abra **Herramientas > Administrador de Robot** (atajo **F6**).  
+2. En la ventana que aparece, vaya al menú lateral y seleccione **Configuración del HOME**.  
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/0935f761-8285-486a-a409-cc48d1032dc9" width="600" />
+</p>
+
+En esta sección se pueden ingresar manualmente los pulsos a los que se desplazará cada eje cuando se ordene el movimiento a **HOME**.  
+Finalmente, presione **Aplicar** para guardar los valores establecidos.
+
+Al escoger **Home** en "Panel de control":
+<p align="center">
+<img width="600" alt="Captura de pantalla 2025-11-20 231210" src="https://github.com/user-attachments/assets/f4373d14-3c47-4d0f-97ac-51387f105ff2" />
+</p>
+El Robot se dirige a la posición mostrada en pantalla:
+
+<p align="center">
+<img width="600" alt="Home_0_0_0_0" src="https://github.com/user-attachments/assets/21ea8a78-505f-4372-9b89-b475f7382196" />
+</p>
+
 > [!WARNING]
 > FALTA agregar imagen del robot en posición HOME tomada mañana (archivo sugerido: **home_t3.png**).
 
 La posición HOME se define como la postura de referencia segura del robot SCARA.  
-Para el EPSON T3-401S:
-
-- **J1:** 0°  
-- **J2:** 0°  
-- **J3 (Z):** Altura superior segura  
-- **J4 (rotación de herramienta):** 0°
 
 Se usa para:
 - Calibración  
 - Inicio/fin de ciclo  
 - Recuperación ante errores
-
-> [!WARNING]
-> FALTA incluir foto real tomada en laboratorio para esta sección.
 
 ---
 
