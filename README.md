@@ -28,6 +28,12 @@ Este repositorio contiene el desarrollo completo del **Laboratorio Nº3** de *Ro
 > [!WARNING]
 > FALTA agregar imagen resumen comparativa de los tres robots (EPSON T3-401S, Motoman MH6, ABB IRB140).
 
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/06aa5190-ba78-4bb8-9037-c6bb08637aeb" width="400" />
+</p>
+
+
+
 - Comparar técnicamente los manipuladores **EPSON T3-401S**, **Motoman MH6** y **ABB IRB140**.  
 - Identificar y describir la **configuración HOME del EPSON T3-401S**.  
 - Realizar **movimientos manuales** en modos articulares y cartesianos.  
@@ -41,7 +47,6 @@ Este repositorio contiene el desarrollo completo del **Laboratorio Nº3** de *Ro
 
 # Integrantes y Docentes
 
-(Sección correcta, no requiere imágenes adicionales.)
 
 ---
 
