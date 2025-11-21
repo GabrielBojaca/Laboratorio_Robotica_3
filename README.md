@@ -18,6 +18,11 @@
 > [!WARNING]  
 > FALTA insertar una imagen introductoria del robot EPSON T3-401S tomada en el laboratorio.
 
+
+<img width="1722" height="565" alt="Epson" src="https://github.com/user-attachments/assets/e3cde2da-87db-42c7-8a51-3a1614b4d0b5" />
+
+
+
 Este repositorio contiene el desarrollo completo del **Laboratorio Nº3** de Robótica Industrial 2025-II:  
 **Análisis y operación del manipulador EPSON T3-401S**, comparación con **Motoman MH6** y **ABB IRB140**, práctica de movimiento manual, control de velocidades, diseño de un gripper neumático, uso del software **EPSON RC+ 7.0**, y diseño/ejecución de una trayectoria con patrón del caballo de ajedrez.
 
