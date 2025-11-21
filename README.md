@@ -127,17 +127,31 @@ Se usa para:
 > - Ejes cartesianos y articulares  
 > - Servo ON/OFF  
 
-En el EPSON T3-401S, los movimientos manuales se realizan desde **EPSON RC+ 7.0**:
+En el EPSON T3-401S, los movimientos manuales se realizan desde **EPSON RC+ 7.0**. Estos se ejecutan desde la ventana **Administrador de Robot** en la pestaña **Mover y enseñar**. 
+
+<p align="center">
+  <img width="600" alt="Captura de pantalla 2025-11-20 234117" src="https://github.com/user-attachments/assets/fc463306-681e-45c3-af33-0ba81f68bd5d" />
+</p>
+
+En **Modo:** podemos seleccionar multiples modos de desplazamiento y seleccionar uno de los das dos velocidades disponibles para movimiento manual (**Alta** y **Baja**).
+
+<p align="center">
+<img width="280"  alt="image" src="https://github.com/user-attachments/assets/1fd5a5aa-c8b7-4ffc-a389-6f59e8c0458c" />
+</p>
+
+Sin embargo, para que el robot tenga la capacidad de ejevutar los movimientos, es necesario encender los motores y seleccionar la potencia de los motores, para esto, presionamos el botón
+**MOTOR ON** en la pestaña **Panel de control**. Tengase en cuenta que con la opción de potencia **POWER LOW** la velocidad de los motores será menor, algo más apropiado para calibración y teach. 
+
+
+<p align="center">
+<img width="600"  alt="motoron" src="https://github.com/user-attachments/assets/f914a59c-d36a-4795-91ac-e68aefd185a2" />
+</p>
 
 ### Modos disponibles:
 - **Joint Mode (JOG J1–J4)**  
 - **Cartesian Mode (X, Y, Z, θ)**  
 
-### Teclas principales:
-- **Flechas:** X / Y  
-- **Page Up/Down:** eje Z  
-- **R/L:** rotación de herramienta  
-- **Switch de velocidad:** Low / Mid / High  
+
 
 ### Procedimiento:
 1. Activar servo (Servo Power ON)  
