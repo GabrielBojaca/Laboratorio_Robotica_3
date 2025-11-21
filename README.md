@@ -121,11 +121,9 @@ Se usa para:
 # 3. Movimientos manuales (Jogging)
 
 > [!WARNING]
-> FALTA agregar capturas del Jog Panel en EPSON RC+ 7.0:
-> - Vista del panel JOG  
-> - Botones de velocidad  
-> - Ejes cartesianos y articulares  
-> - Servo ON/OFF  
+> Según sea el caso, el operador debe realizar una configuración adecuada del controlador en el apartado "Conexión":
+> - Si se trata del robot fisico mediante conexion USB debe serleccionarse en Conexión **USB**.
+> - Si se trata de una simulación del Robot, es necesario crear un controlador virtual.
 
 En el EPSON T3-401S, los movimientos manuales se realizan desde **EPSON RC+ 7.0**. Estos se ejecutan desde la ventana **Administrador de Robot** en la pestaña **Mover y enseñar**. 
 
@@ -139,49 +137,99 @@ En **Modo:** podemos seleccionar multiples modos de desplazamiento y seleccionar
 <img width="280"  alt="image" src="https://github.com/user-attachments/assets/1fd5a5aa-c8b7-4ffc-a389-6f59e8c0458c" />
 </p>
 
-Sin embargo, para que el robot tenga la capacidad de ejevutar los movimientos, es necesario encender los motores y seleccionar la potencia de los motores, para esto, presionamos el botón
-**MOTOR ON** en la pestaña **Panel de control**. Tengase en cuenta que con la opción de potencia **POWER LOW** la velocidad de los motores será menor, algo más apropiado para calibración y teach. 
-
+Sin embargo, para que el robot tenga la capacidad de ejecutar los movimientos, es necesario encender los motores y seleccionar la potencia de los motores, para esto, presionamos el botón
+**MOTOR ON** en la pestaña **Panel de control**. Tengase en cuenta que con la opción de potencia **POWER LOW** la potencia de los motores será menor, algo más apropiado para calibración y teach. 
 
 <p align="center">
 <img width="600"  alt="motoron" src="https://github.com/user-attachments/assets/f914a59c-d36a-4795-91ac-e68aefd185a2" />
 </p>
 
-### Modos disponibles:
-- **Joint Mode (JOG J1–J4)**  
-- **Cartesian Mode (X, Y, Z, θ)**  
+La articulación **J4** siempre opera en **grados**, ya que corresponde al eje rotacional del efector final.  
+Por su parte, **J3** trabaja exclusivamente en **milímetros**, debido a que es el eje lineal del robot.  
+Las demás articulaciones pueden configurarse directamente en coordenadas angulares o determinarse automáticamente mediante la **cinemática inversa** cuando se realizan movimientos en el espacio de trabajo.
 
+### Modos de movimiento
 
+- **Mundo, Herramienta, Local (X, Y, Z, θ):**  
+  Permiten desplazar el robot en el **espacio cartesiano**, seleccionando el marco de referencia desde el cual se interpretan los comandos:  
+  - **Mundo:** Coordenadas medidas desde el origen global del sistema.  
+  - **Herramienta:** Movimientos definidos respecto al **TCP** (Tool Center Point).  
+  - **Local:** Movimientos relativos al **flange** o punto de montaje del efector final.
 
-### Procedimiento:
-1. Activar servo (Servo Power ON)  
-2. Seleccionar el **modo JOG**  
-3. Elegir **Joint** o **Cartesian**  
-4. Ajustar velocidad de jogging  
-5. Ejecutar movimientos  
+- **Articular (θ₁, θ₂, Z, θ₄):**  
+  Permite controlar cada articulación del robot **SCARA** de forma independiente, asignando valores directos a cada eje según su unidad correspondiente.
 
-Incluye capturas de pantalla del pendant virtual.
+El software permite modificar las distancia de movimiento cada vez que se ejecuta una instrucción de movimiento manual. 
+<p align="center">
+<img width="400"  alt="image" src="https://github.com/user-attachments/assets/6c825a93-d0cf-48b8-84fa-e641f40b222c" />
+</p>
 
-> [!WARNING]
-> Capturas aún no agregadas: deberán tomarse en el laboratorio.
+La interfaz de movimiento cambia según el modo de movimeinto seleccionado, para movimiento en el espacio de trabajo:
+
+<p align="center">
+<img width="600"  alt="espaciotrabajo" src="https://github.com/user-attachments/assets/e5a254a9-9df5-4903-a1ae-9407ecd7b8a2" />
+</p>
+
+Mientras que, para movimiento en modo articular, la interfaz toma la siguiente apariencia:
+
+<p align="center">
+<img width="600" alt="espacioconf" src="https://github.com/user-attachments/assets/1c311481-e1fc-4880-a22f-0dfc77d0dc20" />
+</p>
+
+En resumen:
+1. Activar servo (Servo Power ON).
+2. Seleccionar el **Mover y enseñar**.  
+3. Elegir entre los Modos en el espacio de configuración o en el espacio de trabajo.
+4. Ajustar velocidad de jogging y la magnitud de cada salto.
+5. Ejecutar movimientos.
 
 ---
 
 # 4. Niveles de velocidad en EPSON RC+ 7.0
 
-> [!WARNING]
-> FALTA captura mostrando el selector LOW / MID / HIGH en EPSON RC+.
+En la pestaña **Mover y enseñar** puede configurarse el nivel de velocidad, mientras que en **Panel de control** el nivel de potencia.
 
-EPSON RC+ proporciona tres niveles:
+### Velocidad: “Alta” vs “Baja”
+- **Velocidad Baja:** el robot se desplaza más lento debido a una limitación en el parámetro *Speed*.  
+- **Velocidad Alta:** permite un valor de *Speed* mayor, por lo que el movimiento es más rápido.
 
-- **LOW** – precisión  
-- **MID** – desplazamientos medios  
-- **HIGH** – desplazamientos largos  
+La velocidad solo determina **qué tan rápido se mueve el robot**, no la fuerza que aplica.
 
-La velocidad activa se visualiza en:
-- Barra superior de la interfaz  
-- Indicador “Jog Speed”  
-- Control físico en el panel de mando
+<p align="center">
+  <img width="400" height="106" alt="image" src="https://github.com/user-attachments/assets/3adc679e-6966-4ca3-bcbc-4c4331d6331f" />
+</p>
+
+---
+
+### Potencia: Power LOW vs Power HIGH
+
+Según el manual del Epson T3-401S, este ajuste modifica la **fuerza/torque disponible**, no la velocidad.
+- **Power LOW:** el robot trabaja con potencia reducida; limita la fuerza del motor.  
+- **Power HIGH:** habilita la potencia completa del motor.
+
+<p align="center">
+<img width="246" alt="image" src="https://github.com/user-attachments/assets/d30b76e1-7445-42e2-be3b-0db50faa2484" />
+</p>
+
+La potencia afecta la **capacidad de esfuerzo del robot**, no la velocidad programada.
+En la pestaña **Panel de control**, en la sección  **estado** se evidencia el nivel de potencia, por ejemplo, para potencia alta:
+<p align="center">
+<img width="600" alt="image" src="https://github.com/user-attachments/assets/9ec38bb1-ef55-44d0-847e-f84c7a285dc1" />
+</p>
+Mientras que para potencia baja:
+<p align="center">
+<img width="600"  alt="image" src="https://github.com/user-attachments/assets/df222cf7-06b5-4ce9-81b4-d927a7d0dcbf" />
+</p>
+
+---
+
+### Relación entre velocidad y potencia
+
+- Puede usarse **velocidad alta con potencia baja**, pero el robot podría no manejar cargas exigentes.  
+- Puede usarse **velocidad baja con potencia alta**, útil para mover cargas pesadas de forma controlada.  
+
+En resumen: **potencia y velocidad**.  
+Si se solicita mucha velocidad estando en *Power LOW*, el robot puede autolimitarse para evitar sobreesfuerzos.
 
 ---
 
