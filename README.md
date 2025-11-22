@@ -349,9 +349,6 @@ NEXT
 ### Ejecución real en el EPSON T3-401S  
 (video aquí)
 
-### Prueba del gripper neumático  
-(video aquí)
-
 ---
 
 # Estructura del repositorio
