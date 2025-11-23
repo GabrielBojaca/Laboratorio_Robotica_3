@@ -106,8 +106,11 @@ El Robot se dirige a la posición mostrada en pantalla:
 <img width="600" alt="Home_0_0_0_0" src="https://github.com/user-attachments/assets/21ea8a78-505f-4372-9b89-b475f7382196" />
 </p>
 
-> [!WARNING]
-> FALTA agregar imagen del robot en posición HOME tomada mañana (archivo sugerido: **home_t3.png**).
+El home usado en este laboratorio tiene 0 pulsos en todas las posiciones articulares, el resultado obtenido una vez acoplado el gripper neumático se observa a continuación:
+
+<p align="center">
+  <img width="800" height="1504" alt="Captura de pantalla 2025-11-22 213836" src="https://github.com/user-attachments/assets/b3ab4f1b-2e88-49e4-9815-1c7d52c1fd3d" />
+</p>
 
 La posición HOME se define como la postura de referencia segura del robot SCARA.  
 
@@ -235,8 +238,9 @@ Si se solicita mucha velocidad estando en *Power LOW*, el robot puede autolimita
 
 # 5. Software EPSON RC+ 7.0
 
-> [!WARNING]
-> FALTA agregar captura del entorno EPSON RC+ con el robot cargado.
+<p align="center">
+<img width="1000"  alt="image" src="https://github.com/user-attachments/assets/5deb765f-dce5-493c-9eb7-1a99190b675e" />
+</p>
 
 Principales aplicaciones:
 
@@ -250,10 +254,7 @@ Principales aplicaciones:
 ### Comunicación con el manipulador:
 - Protocolo USB industrial  
 - RC+ envía comandos SPEL+  
-- El controlador ejecuta interpolación y límites  
-
-> [!WARNING]
-> FALTA incluir diagrama del flujo PC → RC+ → Controlador → Robot.
+- El controlador ejecuta las instrucciones programadas.
 
 ---
 
@@ -272,25 +273,33 @@ Principales aplicaciones:
 
 ---
 
-# 7. Diseño del gripper neumático (Vacío)
+# 7. Diseño del gripper neumático
 
-> [!WARNING]
-> FALTA agregar diagrama neumático (archivo: **diagrama_gripper.svg**).
+El gripper neumático fue diseñado en conjunto por los estudiantes del grupo del laboratorio (Particular agradecimiento al estudiante Esteban Duran) con el fin de ser impreso en 3d. A continuación se observa el 
+gripper fijado al robot en el apartado de simulación del software EPSON RC+
 
-> [!WARNING]
-> FALTA imagen real del gripper construido (si fue fabricado en el laboratorio).
+<p align="center">
+<img width="600" alt="image" src="https://github.com/user-attachments/assets/8ba50628-0ce5-48a6-a4ec-77d695f80856" />
+</p>
+
+
+El montaje usado se muestra en la siguiente imagen, donde se observa el gripper neumático fijado al robot, en cual está en posición **HOME**.
+
+<p align="center">
+<img width="600" alt="image" src="https://github.com/user-attachments/assets/c4590f86-da84-4a2d-b859-a031829d118c" />
+</p>
+
 
 Incluye:
 
 - Ventosa de vacío  
-- Válvula 3/2  
-- Venturi o compresor  
-- Tubo 4 mm  
-- OUT1 del robot  
-- Sensor IN1 opcional  
+- Válvula 5/2  
+- Venturi
+- Out_9 del robot  
 
-> [!WARNING]
-> FALTA esquema eléctrico en E/S (archivo sugerido: **io_config.png**).
+<p align="center">
+<img width="600" alt="image" src="https://github.com/user-attachments/assets/6d758569-12ac-4b16-bf8a-ba1adb50fb28" />
+</p>
 
 ---
 
