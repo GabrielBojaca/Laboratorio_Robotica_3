@@ -308,6 +308,15 @@ Incluye:
 > [!WARNING]
 > FALTA plano de planta 2D (**plano_cubeta.svg**).
 
+
+## Trayectoria escogida
+
+
+
+<p align="center">
+<img width="600" alt="Captura de pantalla 2025-11-22 224109" src="https://github.com/user-attachments/assets/f085bbca-67f9-48b5-bf10-cc59da5bb249" />
+</p>
+
 > [!WARNING]
 > FALTA diagrama de flujo de la trayectoria del caballo.
 
