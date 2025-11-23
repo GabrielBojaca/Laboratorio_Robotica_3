@@ -311,6 +311,21 @@ Incluye:
 
 ## Trayectoria escogida
 
+El siguiente grafico muestra una matriz de **5 filas × 6 columnas** (30 celdas en total). Cada celda contiene un cuadro con un número, y ese número corresponde a su índice de posición entre 1 y 30. La no avanza simplemente de izquierda a derecha y cuando llega a la columna final, continua aumentando en la fila de abajo de izquierda a derecha. 
+
+```
+Fila 1 → 1,2,3,4,5,6
+Fila 2 → 7,8,9,10,11,12
+Fila 3 → 13…18
+Fila 4 → 19…24
+Fila 5 → 25…30
+```
+
+Además del cuadro con el índice, cada celda contiene dos círculos, cada uno con un número: representan dos huevos que recorren la matriz. El huevo amarillo es el huevo 1 y el azul es el huevo 2. El número dentro de cada círculo indica **en qué paso** de la secuencia ese huevo estuvo en esa celda.
+
+Ambos huevos se desplazan utilizando un movimiento tipo caballo de ajedrez: dos unidades en una dirección y una en la perpendicular. El huevo 1 inicia en el índice **1** en el paso 1, mientras que el huevo 2 inicia en el índice **30**, también en el paso 1. A medida que avanzan los pasos, cada huevo se mueve a la siguiente celda según la regla del caballo.
+
+Así, el gráfico representa visualmente las trayectorias completas de ambos huevos sobre la matriz. Si en una celda el círculo amarillo tiene un “8”, significa que **en el paso 8 el huevo 1 se encontraba allí**; si el círculo azul muestra un “15”, significa que **en el paso 15 el huevo 2 pasó por esa misma celda**. De este modo, el gráfico permite ver simultáneamente la numeración fija de la matriz y el orden temporal en que cada huevo visitó cada posición.
 
 
 <p align="center">
