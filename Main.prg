@@ -9,8 +9,8 @@ Global Integer i
 Global Integer k
 Global Integer curA
 Global Integer curB
-Global Integer pathA(31)
-Global Integer pathB(31)
+Global Integer pathA(32)
+Global Integer pathB(32)
 ' --- Para impresión y conteo ---
 Global Integer visited(30)
 Global Integer visitedCount
@@ -33,22 +33,28 @@ Function CargarRutas
     pathA(13) = 24
     pathA(14) = 11
     pathA(15) = 22
-    pathA(16) = 30 ' ------ Aqui hace el cambio  ------------
-    pathA(17) = 1
-    pathA(18) = 9
-    pathA(19) = 5
-    pathA(20) = 18
-    pathA(21) = 29
-    pathA(22) = 21
-    pathA(23) = 25
-    pathA(24) = 14
-    pathA(25) = 3
-    pathA(26) = 7
-    pathA(27) = 20
-    pathA(28) = 28
-    pathA(29) = 24
-    pathA(30) = 11
-    pathA(31) = 22
+     
+    pathA(16) = 30  ' ----------------- Huevo  -----------------
+    pathA(17) = 17
+    pathA(18) = 6
+    pathA(19) = 10
+    pathA(20) = 2
+    pathA(21) = 13
+    pathA(22) = 26
+    pathA(23) = 15
+    pathA(24) = 19
+	pathA(25) = 8
+    pathA(26) = 4
+    pathA(27) = 12
+    pathA(28) = 16
+    pathA(29) = 27
+    pathA(30) = 23
+    pathA(31) = 23
+    pathA(32) = 23
+       
+    
+    
+
     ' ----------------- Huevo 2 (empieza en 30) ----------------
     pathB(1) = 30
     pathB(2) = 17
@@ -65,22 +71,26 @@ Function CargarRutas
     pathB(13) = 16
     pathB(14) = 27
     pathB(15) = 23
-    pathB(16) = 1 ' ------ Aqui hace el cambio  ------------
-    pathB(17) = 30
-    pathB(18) = 17
-    pathB(19) = 6
-    pathB(20) = 10
-    pathB(21) = 2
-    pathB(22) = 13
-    pathB(23) = 26
-    pathB(24) = 15
-    pathB(25) = 19
-    pathB(26) = 8
-    pathB(27) = 4
-    pathB(28) = 12
-    pathB(29) = 16
-    pathB(30) = 27
-    pathB(31) = 23
+	pathB(16) = 27  ' ----------------- Huevo  -----------------
+    pathB(17) = 14
+    pathB(18) = 1
+    pathB(19) = 9
+    pathB(20) = 5
+    pathB(21) = 18
+    pathB(22) = 29
+    pathB(23) = 21
+    pathB(24) = 25
+    pathB(25) = 14
+    pathB(26) = 3
+    pathB(27) = 7
+    pathB(28) = 20
+    pathB(29) = 28
+    pathB(30) = 24
+    pathB(31) = 11
+    pathB(32) = 22
+    
+    
+
 Fend
 
 Function MarcarVisitado(idx As Integer)
@@ -118,7 +128,7 @@ Function Paletizado_01
     Call ImprimeIdx("H2 inicia en", curB)
     Print "Visitados únicos: ", visitedCount, "/30"
     ' ---- Alternar movimientos ----
-    For k = 2 To 31
+    For k = 2 To 32
         ' -------- Huevo 1 ----------
         Call ImprimeIdx("H1: regresa a (PICK)", curA)
         Call MarcarVisitado(curA)
@@ -155,6 +165,7 @@ Function Paletizado_01
 Fend
 
 Function main
+	Wait 10
     Motor On
     Power High
     Accel 100, 100
