@@ -332,14 +332,16 @@ Así, el gráfico representa visualmente las trayectorias completas de ambos hue
 <img width="600" alt="Captura de pantalla 2025-11-22 224109" src="https://github.com/user-attachments/assets/f085bbca-67f9-48b5-bf10-cc59da5bb249" />
 </p>
 
-> [!WARNING]
-> FALTA diagrama de flujo de la trayectoria del caballo.
-
-> [!WARNING]
-> FALTA grafo de conectividad permitido.
+Esta trayectorai se ejecutó 
 
 > [!WARNING]
 > FALTA foto del montaje real de la cubeta en el laboratorio.
+
+El montaje final, con el TCP y los puntos utilizados para esta trayectoria se muestra a continuación:
+
+<p align="center">
+<img width="600" height="731" alt="image" src="https://github.com/user-attachments/assets/d1a24107-267c-4495-97c8-9418fd5fbf09" />
+</p>
 
 ### Requerimiento:
 
