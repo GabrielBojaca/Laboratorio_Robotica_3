@@ -1,4 +1,4 @@
-<p align="center">
+<img width="1914" height="1322" alt="image" src="https://github.com/user-attachments/assets/f45db73a-7e59-4912-9990-9fb2c01544aa" /><img width="1914" height="1322" alt="image" src="https://github.com/user-attachments/assets/adf16cfa-01d5-4595-8d32-c31cf1f7b759" /><p align="center">
 <img src="https://capsule-render.vercel.app/api?type=waving&height=160&fontSize=28&color=0:001B2E,50:004E89,100:1A659E&text=Laboratorio%203%20-%20Robótica%202025-II&fontColor=E0FBFC&fontAlign=50&fontAlignY=30&desc=Análisis%20y%20Operación%20del%20Manipulador%20EPSON%20T3-401S&descAlign=50&descAlignY=70" />
 </p>
 
@@ -25,9 +25,9 @@ Este repositorio contiene el desarrollo completo del **Laboratorio Nº3** de *Ro
 
 # Resultados de aprendizaje
 
-> [!WARNING]
+<!-- [!WARNING]
 > FALTA agregar imagen resumen comparativa de los tres robots (EPSON T3-401S, Motoman MH6, ABB IRB140).
-
+-->
 <p align="center">
   <img src="https://github.com/user-attachments/assets/06aa5190-ba78-4bb8-9037-c6bb08637aeb" width="400" />
 </p>
@@ -47,14 +47,50 @@ Este repositorio contiene el desarrollo completo del **Laboratorio Nº3** de *Ro
 
 # Integrantes y Docentes
 
+<!-- ===== INICIO BLOQUE ANIMACIONES EQUIPO (una animación por línea) ===== -->
+
+<!-- Encabezado: Integrantes -->
+<p align="center">
+  <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=800&size=22&duration=2000&pause=1800&color=00E5FF&center=true&vCenter=true&width=1000&repeat=true&v=1&lines=Integrantes%3A" alt="Integrantes">
+</p>
+
+<!-- Nombre 1 -->
+<p align="center">
+  <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=700&size=20&duration=2400&pause=2000&color=7F5AF0&center=true&vCenter=true&width=1000&repeat=true&v=1&lines=Jorge+Nicol%C3%A1s+Garz%C3%B3n+Acevedo+%E2%80%94+jngarzona%40unal.du.co" alt="Jorge Nicolás Garzón Acevedo">
+</p>
+
+<!-- Nombre 2 -->
+<p align="center">
+  <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=700&size=20&duration=2400&pause=2000&color=7F5AF0&center=true&vCenter=true&width=1000&repeat=true&v=1&lines=Johan+Camilo+Pati%C3%B1o+Mogoll%C3%B3n+%E2%80%94+jopatinom%40unal.edu.co" alt="Johan Camilo Patiño Mogollón">
+</p>
+
+<!-- Nombre 3 -->
+<p align="center">
+  <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=700&size=20&duration=2400&pause=2000&color=7F5AF0&center=true&vCenter=true&width=1000&repeat=true&v=1&lines=Gabriel+Eduardo+Bojaca+Munar+%E2%80%94+gbojaca%40unal.edu.co" alt="Gabriel Eduardo Bojaca Munar">
+</p>
+
+<!-- Encabezado: Docentes -->
+<p align="center">
+  <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=1800&size=22&duration=2000&pause=1800&color=00E5FF&center=true&vCenter=true&width=1000&repeat=true&v=1&lines=Docentes%3A" alt="Docentes">
+</p>
+
+<!-- Docente 1 -->
+<p align="center">
+  <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=700&size=20&duration=2400&pause=2000&color=39D353&center=true&vCenter=true&width=1000&repeat=true&v=1&lines=Manuel+Felipe+Carranza+Montenegro+%E2%80%94+mcarranza%40unal.edu.co" alt="Manuel Felipe Carranza Montenegro">
+</p>
+
+<!-- Docente 2 -->
+<p align="center">
+  <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=700&size=20&duration=2400&pause=2000&color=39D353&center=true&vCenter=true&width=1000&repeat=true&v=1&lines=Pedro+Fabi%C3%A1n+C%C3%A1rdenas+Herrera+%E2%80%94+pfcardenash%40unal.edu.co" alt="Pedro Fabián Cárdenas Herrera">
+</p>
 
 ---
 
 # 1. Cuadro comparativo de manipuladores
-
+<!--
 > [!WARNING]
 > FALTA agregar captura un cuadro comparativo más completo, como el de el lab pasado, pero estos datos parecen ser los básicos que pide el laboratorio.
-
+-->
 | Característica | EPSON T3-401S | Motoman MH6 | ABB IRB140 |
 |---|---|---|---|
 | Tipo | SCARA | Articulado 6 DOF | Articulado 6 DOF |
@@ -123,10 +159,9 @@ Se usa para:
 
 # 3. Movimientos manuales (Jogging)
 
-> [!WARNING]
-> Según sea el caso, el operador debe realizar una configuración adecuada del controlador en el apartado "Conexión":
-> - Si se trata del robot fisico mediante conexion USB debe serleccionarse en Conexión **USB**.
-> - Si se trata de una simulación del Robot, es necesario crear un controlador virtual.
+ Nota:Según sea el caso, el operador debe realizar una configuración adecuada del controlador en el apartado "Conexión" donde podra hacerlo de dos maneras:
+ 1. Si se trata del robot fisico mediante conexion USB debe serleccionarse en Conexión **USB**.
+ 2. Si se trata de una simulación del Robot, es necesario crear un controlador virtual.
 
 En el EPSON T3-401S, los movimientos manuales se realizan desde **EPSON RC+ 7.0**. Estos se ejecutan desde la ventana **Administrador de Robot** en la pestaña **Mover y enseñar**. 
 
@@ -260,8 +295,14 @@ Principales aplicaciones:
 
 # 6. EPSON RC+ 7.0 vs RobotStudio vs RoboDK
 
-> [!WARNING]
-> FALTA agregar imagen con los logos de los tres softwares (EPSON RC+, RoboDK, RobotStudio).
+<p align="center">
+   <img width="600" alt="Robodk" src="https://github.com/user-attachments/assets/22d2c19c-e174-446e-b82c-8880e2228238" />
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  
+  <img width="300" height="350" alt="Abb" src="https://github.com/user-attachments/assets/a3818a72-491e-48e0-b395-98417e7148f2" />
+<img width="300" height="277" alt="epson-logo-8" src="https://github.com/user-attachments/assets/a8346bf6-4a83-4f20-b7cc-c8fe79e4ea35" />
+</p>
+
+<div align="center">
 
 | Criterio | EPSON RC+ | RoboDK | RobotStudio |
 |---|---|---|---|
@@ -270,6 +311,9 @@ Principales aplicaciones:
 | Lenguaje | SPEL+ | Python, C# | RAPID |
 | Simulación | Básica | Flexible | Industrial 1:1 |
 | Uso ideal | Pick & place | Multimarca | ABB avanzado |
+
+</div>
+
 
 ---
 
@@ -304,11 +348,10 @@ Incluye:
 ---
 
 # 8. Trayectoria con patrón de caballo (Ajedrez)
-
+<!--
 > [!WARNING]
 > FALTA plano de planta 2D (**plano_cubeta.svg**).
-
-
+-->
 ## Trayectoria escogida
 
 El siguiente grafico muestra una matriz de **5 filas × 6 columnas** (30 celdas en total). Cada celda contiene un cuadro con un número, y ese número corresponde a su índice de posición entre 1 y 30. La no avanza simplemente de izquierda a derecha y cuando llega a la columna final, continua aumentando en la fila de abajo de izquierda a derecha. 
@@ -334,8 +377,6 @@ Así, el gráfico representa visualmente las trayectorias completas de ambos hue
 
 Esta trayectorai se ejecutó 
 
-> [!WARNING]
-> FALTA foto del montaje real de la cubeta en el laboratorio.
 
 El montaje final, con el TCP y los puntos utilizados para esta trayectoria se muestra a continuación:
 
@@ -350,9 +391,11 @@ Mover dos huevos por toda la cubeta 6×5 usando movimientos tipo L.
 ---
 
 # 9. Código en SPEL+ (EPSON RC+ 7.0)
-
+<!--
 > [!WARNING]
 > FALTA captura de pantalla del editor SPEL+ mostrando el archivo `horse_pattern.prg`.
+-->
+<img width="1914" height="1322" alt="Screenshot 2025-11-23 231416" src="https://github.com/user-attachments/assets/43eb83f2-5360-427b-bbb2-a4afefb706da" />
 
 ```spel
 REM --- Movimiento tipo caballo para cubeta 6x5 ---
