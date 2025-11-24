@@ -1,4 +1,3 @@
-<img width="1914" height="1322" alt="image" src="https://github.com/user-attachments/assets/f45db73a-7e59-4912-9990-9fb2c01544aa" /><img width="1914" height="1322" alt="image" src="https://github.com/user-attachments/assets/adf16cfa-01d5-4595-8d32-c31cf1f7b759" /><p align="center">
 <img src="https://capsule-render.vercel.app/api?type=waving&height=160&fontSize=28&color=0:001B2E,50:004E89,100:1A659E&text=Laboratorio%203%20-%20Robótica%202025-II&fontColor=E0FBFC&fontAlign=50&fontAlignY=30&desc=Análisis%20y%20Operación%20del%20Manipulador%20EPSON%20T3-401S&descAlign=50&descAlignY=70" />
 </p>
 
@@ -397,6 +396,7 @@ Mover dos huevos por toda la cubeta 6×5 usando movimientos tipo L.
 -->
 <img width="1914" height="1322" alt="Screenshot 2025-11-23 231416" src="https://github.com/user-attachments/assets/43eb83f2-5360-427b-bbb2-a4afefb706da" />
 
+<!--
 ```spel
 REM --- Movimiento tipo caballo para cubeta 6x5 ---
 
@@ -410,23 +410,40 @@ FOR i=1 TO 30
    CALL ActualizarCaballo(hx, hy)
 NEXT
 ```
+-->
+El archivo a continuacion es el codigo ejecutado para realizar las trayectorias solicitadas en el laboratorio, donde se cumple el correcto movimiento tipo caballo ajedrez de los dos huevos el cual pasan en cada una de las posiciones de la bandeja de huevos. 
 
-> El archivo completo está en `/code/horse_pattern.prg`.
+📄 **Archivo SPEL+** → [Main.prg](Main.prg)
+
 
 ---
 
 # 10. Videos
 
-> [!WARNING]
-> FALTA incrustar enlaces reales a los videos (simulacion.mp4, implementacion.mp4, gripper.mp4).  
-> Puedes subirlos a GitHub o a YouTube.
+
 
 ### Simulación EPSON RC+  
 (video aquí)
 
 ### Ejecución real en el EPSON T3-401S  
-(video aquí)
+Hacer click en la imagen o en el recuadro abajo de la imagen.
+<p align="center">
+  <a href="https://www.youtube.com/watch?v=Xum1jzhGRKI">
+    <img src="https://github.com/user-attachments/assets/c4590f86-da84-4a2d-b859-a031829d118c" 
+         alt="Ver video de la práctica con robot Epson para paletizado." 
+         width="350" />
+  </a>
+</p>
 
+<p align="center">
+  <a href="https://www.youtube.com/watch?v=Xum1jzhGRKI">
+    <img src="https://img.shields.io/badge/Ver%20en%20YouTube-%F0%9F%94%B4-red?style=for-the-badge" 
+         alt="Ver en YouTube">
+  </a>
+</p>
+
+
+<!--
 ---
 
 # Estructura del repositorio
