@@ -428,7 +428,7 @@ El archivo a continuacion es el codigo ejecutado para realizar las trayectorias 
 ### Ejecución real en el EPSON T3-401S  
 Hacer click en la imagen o en el recuadro abajo de la imagen.
 <p align="center">
-  <a href="https://www.youtube.com/watch?v=Xum1jzhGRKI">
+  <a href="https://www.youtube.com/watch?v=so7Pgv17r1g">
     <img src="https://github.com/user-attachments/assets/c4590f86-da84-4a2d-b859-a031829d118c" 
          alt="Ver video de la práctica con robot Epson para paletizado." 
          width="350" />
@@ -436,7 +436,7 @@ Hacer click en la imagen o en el recuadro abajo de la imagen.
 </p>
 
 <p align="center">
-  <a href="https://www.youtube.com/watch?v=Xum1jzhGRKI">
+  <a href="https://www.youtube.com/watch?v=so7Pgv17r1g">
     <img src="https://img.shields.io/badge/Ver%20en%20YouTube-%F0%9F%94%B4-red?style=for-the-badge" 
          alt="Ver en YouTube">
   </a>
