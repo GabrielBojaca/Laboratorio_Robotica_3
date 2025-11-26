@@ -420,18 +420,15 @@ El archivo a continuacion es el codigo ejecutado para realizar las trayectorias 
 
 # 10. Videos
 
+### Ejecución real y simulación en el EPSON T3-401S  
+A continuacion se muestra el video donde se ve el codigo funcionando en el software de simulacion del RC EPSON y a si mismo aplicado en el robot real.
 
-
-### Simulación EPSON RC+  
-(video aquí)
-
-### Ejecución real en el EPSON T3-401S  
 Hacer click en la imagen o en el recuadro abajo de la imagen.
 <p align="center">
   <a href="https://www.youtube.com/watch?v=so7Pgv17r1g">
     <img src="https://github.com/user-attachments/assets/c4590f86-da84-4a2d-b859-a031829d118c" 
          alt="Ver video de la práctica con robot Epson para paletizado." 
-         width="350" />
+         width="450" />
   </a>
 </p>
 
