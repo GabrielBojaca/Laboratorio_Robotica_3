@@ -427,44 +427,43 @@ El archivo a continuacion es el codigo ejecutado para realizar las trayectorias 
 flowchart TD
 
     %% INICIALIZACIÓN
-    A[Inicio] --> B[Verificar conexión con EPSON RC+ 7.0<br/>(controlador / simulador)]
-    B --> C[Encender servos y motores<br/>(Servo/MOTOR ON)]
-    C --> D[Configurar potencia y velocidad<br/>(POWER · SPEED)]
-    D --> E[Ir a HOME<br/>(0,0,0,0 – postura segura)]
+    A["Inicio"] --> B["Verificar conexión con EPSON RC+ 7.0<br/>(controlador / simulador)"]
+    B --> C["Encender servos y motores<br/>(Servo/MOTOR ON)"]
+    C --> D["Configurar potencia y velocidad<br/>(POWER · SPEED)"]
+    D --> E["Ir a HOME<br/>(0,0,0,0 – postura segura)"]
 
-    E --> F[Inicializar variables<br/>EV = 1 · contador = 2<br/>Marcar H1 y H2 como visitadas]
+    E --> F["Inicializar variables<br/>EV = 1 · contador = 2<br/>Marcar H1 y H2 como visitadas"]
 
     %% BUCLE PRINCIPAL
-    F --> G{¿contador &lt;= 30?}
+    F --> G{"¿contador <= 30?"}
 
-    G -->|No| H[Ir a HOME]
-    H --> I[Apagar motores<br/>(Servo/MOTOR OFF)]
-    I --> J[Fin del proceso]
+    G -->|No| H["Ir a HOME"]
+    H --> I["Apagar motores<br/>(Servo/MOTOR OFF)"]
+    I --> J["Fin del proceso"]
 
-    G -->|Sí| K[Calcular siguiente par de posiciones<br/>H1 y H2 según patrón de caballo<br/>sobre la cubeta 6×5]
+    G -->|Sí| K["Calcular siguiente par de posiciones<br/>H1 y H2 según patrón de caballo<br/>sobre la cubeta 6×5"]
 
     %% SECUENCIA HUEVO 1 (H1)
-    K --> H1A[Ir a posición PICK H1(k)]
-    H1A --> H1B[EV = 0<br/>(activar vacío · tomar huevo 1)]
-    H1B --> H1C[Registrar / imprimir posición actual H1]
-    H1C --> H1D[Ir a posición PLACE H1(k+1)]
-    H1D --> H1E[EV = 1<br/>(liberar huevo 1)]
-    H1E --> H1F[Registrar / imprimir nueva posición H1]
-    H1F --> H1G[contador = contador + 1]
+    K --> H1A["Ir a posición PICK H1(k)"]
+    H1A --> H1B["EV = 0<br/>(activar vacío · tomar huevo 1)"]
+    H1B --> H1C["Registrar / imprimir posición actual H1"]
+    H1C --> H1D["Ir a posición PLACE H1(k+1)"]
+    H1D --> H1E["EV = 1<br/>(liberar huevo 1)"]
+    H1E --> H1F["Registrar / imprimir nueva posición H1"]
+    H1F --> H1G["contador = contador + 1"]
 
     %% SECUENCIA HUEVO 2 (H2)
-    H1G --> H2A[Ir a posición PICK H2(k)]
-    H2A --> H2B[EV = 0<br/>(activar vacío · tomar huevo 2)]
-    H2B --> H2C[Registrar / imprimir posición actual H2]
-    H2C --> H2D[Ir a posición PLACE H2(k+1)]
-    H2D --> H2E[EV = 1<br/>(liberar huevo 2)]
-    H2E --> H2F[Registrar / imprimir nueva posición H2]
-    H2F --> H2G[contador = contador + 1]
+    H1G --> H2A["Ir a posición PICK H2(k)"]
+    H2A --> H2B["EV = 0<br/>(activar vacío · tomar huevo 2)"]
+    H2B --> H2C["Registrar / imprimir posición actual H2"]
+    H2C --> H2D["Ir a posición PLACE H2(k+1)"]
+    H2D --> H2E["EV = 1<br/>(liberar huevo 2)"]
+    H2E --> H2F["Registrar / imprimir nueva posición H2"]
+    H2F --> H2G["contador = contador + 1"]
 
     %% CIERRE DE CICLO
     H2G --> G
-
-==
+```
 
 
 # 10. Videos
